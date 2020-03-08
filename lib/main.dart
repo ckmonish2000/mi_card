@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(title: Center(), backgroundColor: Colors.green),
+          appBar: AppBar(title: Center(child: Text("Movie Listing",style:TextStyle(fontFamily:"Lobster",letterSpacing: 2.5,fontWeight: FontWeight.w500)),), backgroundColor: Colors.green),
           backgroundColor: Colors.green[600],
           body: Container(
             padding: const EdgeInsets.all(30.0),
@@ -32,6 +32,10 @@ class MyApp extends StatelessWidget {
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Lobster'))),
+                              SizedBox(height: 10,
+                              child: Divider(color:Colors.white),),
+                               SizedBox(height: 0,
+                              child: Divider(color:Colors.white),),
                   Center(
                     child: Text("Romantic Comedy",
                         style: TextStyle(
@@ -40,47 +44,44 @@ class MyApp extends StatelessWidget {
                             color: Colors.white,
                             letterSpacing: 5.0)),
                   ),
-                  Container(
-                      color: Colors.white,
-                      width: 200,
-                      
-                      margin:EdgeInsets.fromLTRB(10, 30, 10, 5),
-                      padding: EdgeInsets.all(10.0),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(Icons.phone),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            Text("+91 93466598594",
-                                style: TextStyle(
-                                    fontFamily: "Indie",
-                                    fontSize: 12,
-                                    letterSpacing: 3.5,
-                                    color: Colors.green[900]))
-                          ],
-                        ),
-                      )),
-                      Container(
-                                      color: Colors.white,
-                                      width: 200,
-                                      margin:EdgeInsets.all(10),
-                                      padding:EdgeInsets.all(10),
-                                      child:Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: <Widget>[
-                                        Icon(Icons.email),
-                                        SizedBox(
-                                          width:10.0
-                                        ),
-                                        Text("ckmonish2000@gmail.com",style: TextStyle(fontFamily:"Indie",color: Colors.green[900]),
-                                        )
-                ],),)
-                ]),
+                  SizedBox(height: 10.0,
+                  child:Divider(color:Colors.white) ,),
+                  SizedBox(height:0,
+                  child:Divider(color:Colors.white) ,),
+                  Card(
+                    margin: EdgeInsets.fromLTRB(20, 30, 20, 5),
+                    child: Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: ListTile(
+                            leading: Icon(Icons.calendar_today),
+                            title: Text(
+                              "10 Aug 2001",
+                              style: TextStyle(
+                                  fontFamily: "Indie",
+                                  fontSize: 18,
+                                  letterSpacing: 3.5,
+                                  color: Colors.green[900]),
+                            ))),
+                  ),
+                   Card(
+                    margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                    child: Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: ListTile(
+                            leading: Icon(Icons.attach_money),
+                            title: Text(
+                              "45 crores INR",
+                              style: TextStyle(
+                                  fontFamily: "Indie",
+                                  fontSize: 20,
+                                  letterSpacing: 1,
+                                  color: Colors.green[900]),
+                            ))),
+                  )
+                  
+                ],
+                
+              ),
             ),
           ),
         ));
